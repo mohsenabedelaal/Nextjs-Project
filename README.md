@@ -11,6 +11,18 @@ ps: keep in mind the fewer the dependencies used the lighter the app and the hig
 
 ![alt Server-Side-Rendering-Flowchart](./Server-Side-Rendering-Flowchart.jpg)
 
+# Benefits of the NEXTjs
+
+- Easy page routing (like in the html you just create the page you will go with the name **like** store.js => url/store)
+
+- API Routes
+
+- Out of the box TypeScript and Sass (you can use ts and sass in your app)
+
+- Static site generation
+
+- Easy Deployment (vercel.com just import you github repo)
+
 ## https://nextjs-project-rho-eight.vercel.app/
 
 First, run the development server:
