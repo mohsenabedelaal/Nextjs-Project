@@ -1,8 +1,17 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+# Nextjs
 
-# https://nextjs-project-rho-eight.vercel.app/
+This project is a nextjs app ,Nextjs is a **React** frontend development web framework created by Vercel that enables functionality such as server-side rendering and static site generation
+
+# What is SERVER-SIDE RENDERING (SSR)
+
+Unlike a traditional react app where the entire application is loaded and rendered on the client, Nextjs allows the first page load to be rendered by the server,which is great for SEO and performance.
+ps: keep in mind the fewer the dependencies used the lighter the app and the higher performance your app will be .
+
+![alt Server-Side-Rendering-Flowchart](./Server-Side-Rendering-Flowchart)
+
+## https://nextjs-project-rho-eight.vercel.app/
 
 First, run the development server:
 
