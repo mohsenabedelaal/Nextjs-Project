@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+![alt nextjs-logo](./1200px-Nextjs-logo.svg.png)
+
 # Nextjs
 
 This project is a nextjs app ,Nextjs is a **React** frontend development web framework created by Vercel that enables functionality such as server-side rendering and static site generation
@@ -22,6 +24,16 @@ ps: keep in mind the fewer the dependencies used the lighter the app and the hig
 - Static site generation
 
 - Easy Deployment (vercel.com just import you github repo)
+
+# File and Folder Structure
+
+- **Public** : Where a static site is generated there you can put images there ,but keep in mind that everything you put there is accessable from your browser.
+
+- **Styles** : There is a globals.css which is for the whole app to apply like font-family ,and other stuff can be added to apply on your whole app.
+
+- **Pages** : You will have index.js file and here you will benefit from nextjs, since when you create in this folder a file with a name it will dynamically add it to your route (no need to add routes and other stuff) /store => store.js file .
+
+- **\_app.js**: Wrapps around all of your page components , where it is a function which takes in a component which is your page component with page props and return it , but we can add for this a layout like a navbar,footer, and other stuff.
 
 ## https://nextjs-project-rho-eight.vercel.app/
 
