@@ -9,7 +9,7 @@ This project is a nextjs app ,Nextjs is a **React** frontend development web fra
 Unlike a traditional react app where the entire application is loaded and rendered on the client, Nextjs allows the first page load to be rendered by the server,which is great for SEO and performance.
 ps: keep in mind the fewer the dependencies used the lighter the app and the higher performance your app will be .
 
-![alt Server-Side-Rendering-Flowchart](./Server-Side-Rendering-Flowchart)
+![alt Server-Side-Rendering-Flowchart](./Server-Side-Rendering-Flowchart.jpg)
 
 ## https://nextjs-project-rho-eight.vercel.app/
 
