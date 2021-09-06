@@ -66,6 +66,59 @@ export const getStaticProps = async () =>{
 }
 ```
 
+### Nested Routes
+
+_example: /post/1_
+
+For the **Link** tag in nextjs you might use nested links :
+example:
+
+```bash
+<Link href="/post/[id]" as={`/post/${post.id}`}>{title}</Link>
+```
+
+for nested route you create a folder in the **pages** folder with the route name (post) ,and inside this folder
+you create another folder with the param like [id] ([make sure to adapt to the href you are pointing to ]) ,and inside this folder you create a index.js file and create your page.
+ps: you can use the useRouter hook from next/router to access the url route
+
+```bash
+const post = () =>{
+    const router = useRouter();
+    const {id} = router.query
+    return <div>this is a post {id}</div>
+}
+```
+
+At this level we can getprops from server for this page lets use the getServerSideProps which happens on the request time (note that context can be passed to methods to get page route params and details)
+
+```bash
+export const getServerSideProps = async (context) =>{
+    const res = await fetch(`https....../posts/${context.params.id}`);
+    const result = await res.json();
+    return {
+        props:{
+            result
+        }
+    }
+}
+```
+
+And another solution for dynamic route you can call the getStaticPaths to get the props
+
+```bash
+export const getStaticPaths = async ()=>{
+    const res = await fetch(`https...../posts`);
+    const results = await res.json();
+    const ids = posts.map(post=>post.id);
+    const paths = ids.map(id=>({params:{id:id.toString()}}))
+
+    return {
+        paths,
+        fallback:false //this if you go to a path which is not found it will return a 404 page
+    }
+}
+```
+
 ##### https://nextjs-project-rho-eight.vercel.app/
 
 First, run the development server:
