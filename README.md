@@ -119,7 +119,17 @@ export const getStaticPaths = async ()=>{
 }
 ```
 
+## Test my website on your laptops if you want 😉
+
 ##### https://nextjs-project-rho-eight.vercel.app/
+
+## Feel free to download my code and edit it locally on your machine
+
+just remember to install the dependencies 😊 by (make sure nodejs is installed on your pc):
+
+```bash
+npm install
+```
 
 First, run the development server:
 
@@ -128,6 +138,24 @@ npm run dev
 # or
 yarn dev
 ```
+
+To create a static website you can add inside your package.json file :
+
+```bash
+"scripts":{
+    ....
+    "build":"next build && next export"
+    ...
+}
+```
+
+than
+
+```bash
+npm run build
+```
+
+this will generate a folder with name out which is your static website .
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
