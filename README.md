@@ -35,7 +35,38 @@ ps: keep in mind the fewer the dependencies used the lighter the app and the hig
 
 - **\_app.js**: Wrapps around all of your page components , where it is a function which takes in a component which is your page component with page props and return it , but we can add for this a layout like a navbar,footer, and other stuff.
 
-## https://nextjs-project-rho-eight.vercel.app/
+To create a custom Document ,where document is commonly used to augment your application's html and body tags (this is rendered on the server so no need to add onclick ...),create the file './pages/\_document.js' and extend the Document class like :
+
+```bash
+class MyDocument extends Document
+```
+
+[Nextjs documentation part](https://nextjs.org/docs/advanced-features/custom-document)
+
+# Data Fetching
+
+fetch data and pass it as a props to our component , there are three separate methods that we can use :
+
+1. get static props : which will allow us to fetch data at build time .
+2. get server side props : which will fetch the data on every request (little slower).
+3. get static paths props : which to dynamically generate paths based on the data fetching.
+
+##### getstaticprops method example:
+
+```bash
+export const getStaticProps = async () =>{
+    const res = await fetch(`https......(url)`);
+    const results = await res.json();
+
+    return {
+        props:{
+            results
+        }
+    }
+}
+```
+
+##### https://nextjs-project-rho-eight.vercel.app/
 
 First, run the development server:
 
